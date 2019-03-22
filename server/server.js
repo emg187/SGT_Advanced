@@ -5,7 +5,7 @@ const db = mysql.createConnection(mysqlcredentials); //"use these credentials to
 
 const server = express(); //instantiates a server into the const variable server 
 server.use(express.static(__dirname + "/html"));
-server.use(express.urlencoded({extended: false})); //have express pull urlencoded data from the body and store it in 'body'
+server.use(express.urlencoded({extended: false})); 
 
 server.get("/api/grades", (request, response)=>{
     db.connect(()=>{
@@ -27,13 +27,36 @@ server.get("/api/grades", (request, response)=>{
 //in reality, we wouldn't send the error data back to the client...only during development for our purposes 
 
 server.post("/api/grades", (request, response)=>{
-
+    if (request.body.name===undefined || request.body.course===undefined || request.body.grade===undefined){
+        response.send({
+            success: false,
+            error: "Invalid name, course, or grade"
+        });
+        return;
+    }
+    db.connect(()=>{
+        const name = request.body.name.split(" ");
+        const query = 'INSERT INTO `grades` SET `surname`="'+name.slice(1).join(" ")+'", `givenname`="'+name[0]+'", `course`="'+request.body.course+'", `grade`='+request.body.grade+', `added`=NOW()';
+        db.query(query, (error, result)=>{
+            if (!error){
+                response.send({
+                    success: true,
+                    new_id: result.insertId //returns the new value of the auto-incrementing field of the table 
+                });
+            } else {
+                response.send({
+                    success: false, 
+                    error //object structuring
+                });
+            }
+        });
+    });
 }); //for adding data to the database
 
 
 
 server.listen(3001, ()=>{
-    console.log("carrier has arrived");
+    
 }); //tells the server to listen for a connection at port 3001, and to execute the callback function 
 
 
