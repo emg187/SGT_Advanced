@@ -72,7 +72,7 @@ class SGT_template{
 		} else {
 			
 			$.ajax({
-				url: "http://s-apis.learningfuze.com/sgt/create",
+				url: "api/grades",
 				method: "post",
 				data: {
 					"api_key": "u0IDQ6YttX",
@@ -249,12 +249,8 @@ class SGT_template{
 			if (this.doesStudentExist(id)){
 				delete this.data[id];
 				var ajaxObj = {
-					url: "http://s-apis.learningfuze.com/sgt/delete", 
-					method: "post", 
-					data: {
-						"api_key": "u0IDQ6YttX", 
-						"student_id": id, 
-					}
+					url: "api/grades?student_id=" +id, 
+					method: "delete", 
 				}
 				$.ajax(ajaxObj)
 				return true;

@@ -53,7 +53,30 @@ server.post("/api/grades", (request, response)=>{
     });
 }); //for adding data to the database
 
-
+server.delete("/api/grades", (request, response)=>{
+    if (request.query.student_id===undefined){
+        response.send({
+            success: false,
+            error: "must provide a student id for delete"
+        });
+        return;
+    }
+    db.connect(()=>{
+        const query = "DELETE FROM `grades` WHERE `id`= "+request.query.student_id;
+        db.query(query, (error, result)=>{
+            if (!error) {
+                response.send({
+                    success: true
+                });
+            } else {
+                response.send({
+                    success: false,
+                    error
+                });
+            }
+        });
+    });
+});
 
 server.listen(3001, ()=>{
     
