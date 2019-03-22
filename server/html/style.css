@@ -1,0 +1,346 @@
+body {
+    margin: 0;
+}
+
+.page_header {
+    height: 15vh;
+    font-size: 0;
+    border-bottom: 1px solid lightgray;
+}
+    .title {
+        display: inline-block;
+        height: 100%;
+        width: 50%;
+        font-size: 3vmax;
+        line-height: 15vh;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: 500;
+        box-sizing: border-box;
+        padding-left: 2%;
+    }
+    .average {
+        display: inline-block;
+        height: 100%;
+        width: 45%;
+        font-size: 1.7vmax;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        text-align: right;
+        color: gray;
+        line-height: 15vh;
+    }
+
+.page_body {
+    height: 85vh;
+    font-size: 0;
+}
+    .divider1 {
+        display: inline-block;
+        height: 100%;
+        width: 2%;
+    }
+    .grade_table {
+        display: inline-block;
+        vertical-align: top;
+        width: 67.5%;
+        border-bottom: 1px solid lightgray;
+        padding-bottom: 20px;
+        padding-top: 10px;
+    }
+        .student_list {
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            font-size: 1.2vmax;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        .table_headers {
+            font-weight: bold;
+        }
+        td {
+            width: 29.5%;
+            height: 5vh;
+        }
+        .delete_button {
+            background-color: #f44336;
+            color: white;
+            font-size: 1.2vmax;
+            border-radius: 8px;
+        }
+    .divider2 {
+        display: inline-block;
+        height: 100%;
+        width: 2.5%;
+    }
+    .add_student_form {
+        display: inline-block;
+        vertical-align: top;
+        height: 100%;
+        width: 27.5%;
+    }
+        .form_header {
+            height: 10%;
+            line-height: 8.5vh;
+            font-size: 1.7vmax;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        .name_input_container {
+            height: 10%;
+            font-size: 2vmax;
+        }
+            .fa-user {
+                height: 100%;
+                width: 10%;
+            }
+            .name_input {
+                height: 70%;
+                width: 75%;
+                display: inline-block;
+                font-size: 1.2vmax;
+            }
+        .course_input_container {
+            height: 10%;
+            font-size: 2vmax;
+        }
+            .fa-clipboard {
+                height: 100%;
+                width: 10%;
+            }
+            .course_input {
+                height: 70%;
+                width: 75%;
+                display: inline-block;
+                font-size: 1.2vmax;
+            }
+        .grade_input_container {
+            height: 10%;
+            font-size: 2vmax;
+        }
+            .fa-graduation-cap {
+                height: 100%;
+                width: 10%;
+            }
+            .grade_input {
+                height: 70%;
+                width: 75%;
+                display: inline-block;
+                font-size: 1.2vmax;
+            }
+        .add_cancel_buttons_container {
+            height: 10%;
+            margin-top: 20px;
+        }
+            .add_button {
+                font-size: 1vmax;
+                height: 70%;
+                width: 15%;
+                margin-left: 12%;
+                border-radius: 8px;
+                background-color: rgb(92, 184, 92);
+            }
+            .add_button:hover {
+                cursor: pointer;
+            }
+            .cancel_button {
+                font-size: 1vmax;
+                height: 70%;
+                width: 18%;
+                margin-left: 10%;
+                border-radius: 8px;
+                background-color: rgb(255, 255, 255);
+            }
+            .cancel_button:hover {
+                cursor: pointer;
+            }
+
+
+@media screen and (orientation: landscape) and (max-width: 990px) {
+    .title {
+        font-size: 3.7vmax;
+    }
+    .average {
+        font-size: 2.3vmax;
+    }
+    .student_list {
+        font-size: 1.4vmax;
+    }
+        .delete_button {
+            font-size: 1.4vmax;
+        }
+    .form_header {
+        font-size: 2vmax;
+    }
+        .name_input_container {
+            font-size: 2.2vmax;
+        }
+            .name_input {
+                font-size: 1.3vmax;
+            }
+        .course_input_container {
+            font-size: 2.2vmax;
+        }
+            .course_input {
+                font-size: 1.3vmax;
+            }
+        .grade_input_container {
+            font-size: 2.2vmax;
+        }
+            .grade_input {
+                font-size: 1.3vmax;
+            }
+    .add_button {
+        font-size: 1.2vmax;
+        width: 20%;
+    }
+    .cancel_button {
+        font-size: 1.2vmax;
+        width: 25%;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-width: 767px) {
+    .title {
+        font-size: 4vmax;
+    }
+    .average {
+        font-size: 2.6vmax;
+    }
+    .student_list {
+        font-size: 1.7vmax;
+    }
+        .delete_button {
+            font-size: 1.7vmax;
+        }
+    .form_header {
+        font-size: 2.4vmax;
+    }
+        .name_input_container {
+            font-size: 2.6vmax;
+        }
+            .name_input {
+                font-size: 1.7vmax;
+            }
+        .course_input_container {
+            font-size: 2.6vmax;
+        }
+            .course_input {
+                font-size: 1.7vmax;
+            }
+        .grade_input_container {
+            font-size: 2.6vmax;
+        }
+            .grade_input {
+                font-size: 1.7vmax;
+            }
+    .add_button {
+        font-size: 1.5vmax;
+        width: 23%;
+    }
+    .cancel_button {
+        font-size: 1.5vmax;
+        width: 28%;
+    }
+}
+ 
+@media screen and (orientation: portrait) { /* mobile layout */
+.page_header {
+    position: relative;
+}
+    .title {
+        width: 100%;
+        position: absolute;
+        height: 50%;
+        top: 0%;
+        left: 0%;
+        line-height: normal;
+        font-size: 4vmax;
+    }
+    .average {
+        width: 95%;
+        position: absolute;
+        height: 50%;
+        top: 50%;
+        left: 0%;
+        line-height: normal;
+        font-size: 2.6vmax;
+    }
+.page_body {
+    position: relative;
+}
+    .divider1 {
+        display: none;
+    }
+    .divider2 {
+        display: none;
+    }
+    .grade_table {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 5%;
+    }
+        .student_list {
+            font-size: 1.7vmax;
+        }
+            .delete_button {
+                font-size: 1.7vmax;
+            }
+    .add_student_form {
+        width: 100%;
+        height: 50%;
+        position: absolute;
+        top: 0%;
+        left: 5%;
+    }
+        .form_header {
+            display: block;
+            position: absolute;
+            height: 20%;
+            top: 0%;
+            left: 0%;
+            font-size: 2.4vmax;
+        }
+        .name_input_container {
+            position: absolute;
+            width: 100%;
+            top: 20%;
+            left: 0%;
+            font-size: 2.6vmax;
+        }
+            .name_input {
+                font-size: 1.7vmax;
+            }
+        .course_input_container {
+            position: absolute;
+            width: 100%;
+            top: 40%;
+            left: 0%;
+            font-size: 2.6vmax;
+        }
+            .course_input {
+                font-size: 1.7vmax;
+            }
+        .grade_input_container {
+            position: absolute;
+            width: 100%;
+            top: 60%;
+            left: 0%;
+            font-size: 2.6vmax;
+        }
+            .grade_input {
+                font-size: 1.7vmax;
+            }
+        .add_cancel_buttons_container {
+            position: absolute;
+            width: 100%;
+            top: 80%;
+            left: 0%;
+        }
+            .add_button {
+            font-size: 1.5vmax;
+            width: 23%;
+            }
+            .cancel_button {
+                font-size: 1.5vmax;
+                width: 28%;
+            }
+}

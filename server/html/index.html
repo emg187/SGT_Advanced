@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Student Grade Table</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script src="student.js"></script>
+    <script src="sgt.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <div class="page_header">
+        <div class="title">Student Grade Table</div>
+        <div class="average">Grade Average: </div>
+    </div>
+    <div class="page_body">
+        <div class="divider1"></div>
+        <div class="grade_table">
+            <table class="student_list">
+                <thead>
+                    <td class="table_headers">Student Name</td>
+                    <td class="table_headers">Student Course</td>
+                    <td class="table_headers">Student Grade</td>
+                    <td class="table_headers">Operations</td>
+                </thead>
+                <tbody class="student_display">
+
+                </tbody>
+            </table>
+        </div>
+        <div class="divider2"></div>
+        <div class="add_student_form">
+            <div class="form_header">Add Student</div>
+            <div class="name_input_container">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Student Name" class="name_input">
+            </div>
+            <div class="course_input_container">
+                <i class="far fa-clipboard"></i>
+                <input type="text" placeholder="Student Course" class="course_input">
+            </div>
+            <div class="grade_input_container">
+                <i class="fas fa-graduation-cap"></i>
+                <input type="text" placeholder="Student Grade" class="grade_input">
+            </div>
+            <div class="add_cancel_buttons_container">
+                <button class="add_button">Add</button>
+                <button class="cancel_button">Cancel</button>
+            </div>
+        </div>
+</body>
+</html>
