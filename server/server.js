@@ -1,4 +1,7 @@
 const express = require("express"); //loads the express library into the file
+const mysql = require("mysql");
+const mysqlcredentials = require("./mysqlcreds.js");
+const db = mysql.createConnection(mysqlcredentials); //"use these credentials to connect to the database"
 
 const server = express(); //instantiates a server into the const variable server 
 
